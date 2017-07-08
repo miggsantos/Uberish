@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53A4A2337A1D3F274FB492F8 /* Pods_Uberish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F9B2286E1E0F6578671F7D /* Pods_Uberish.framework */; };
 		93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E21F114970005B8A07 /* AppDelegate.swift */; };
 		93DCF4E51F114970005B8A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E41F114970005B8A07 /* ViewController.swift */; };
 		93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4E61F114970005B8A07 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8401DA419BF7FF2289245FDE /* Pods-Uberish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uberish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uberish/Pods-Uberish.debug.xcconfig"; sourceTree = "<group>"; };
 		93DCF4DF1F114970005B8A07 /* Uberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DCF4E21F114970005B8A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DCF4E41F114970005B8A07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		93DCF4E91F114970005B8A07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93DCF4EC1F114970005B8A07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93DCF4EE1F114970005B8A07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F9B2286E1E0F6578671F7D /* Pods_Uberish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uberish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E659B91C3940C5C1E8B679 /* Pods-Uberish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uberish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uberish/Pods-Uberish.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A4A2337A1D3F274FB492F8 /* Pods_Uberish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F649CA188CE763930861FF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9B2286E1E0F6578671F7D /* Pods_Uberish.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93DCF4D61F11496F005B8A07 = {
 			isa = PBXGroup;
 			children = (
 				93DCF4E11F114970005B8A07 /* Uberish */,
 				93DCF4E01F114970005B8A07 /* Products */,
+				CBCEE679A6B1DFFD14DCA143 /* Pods */,
+				2F649CA188CE763930861FF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Uberish;
 			sourceTree = "<group>";
 		};
+		CBCEE679A6B1DFFD14DCA143 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8401DA419BF7FF2289245FDE /* Pods-Uberish.debug.xcconfig */,
+				F6E659B91C3940C5C1E8B679 /* Pods-Uberish.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93DCF4F11F114970005B8A07 /* Build configuration list for PBXNativeTarget "Uberish" */;
 			buildPhases = (
+				E0A98DD313E467FFFE1A834F /* [CP] Check Pods Manifest.lock */,
 				93DCF4DB1F114970005B8A07 /* Sources */,
 				93DCF4DC1F114970005B8A07 /* Frameworks */,
 				93DCF4DD1F114970005B8A07 /* Resources */,
+				3F5DA5B20F01FE34BCB1103E /* [CP] Embed Pods Frameworks */,
+				CC7C18F7E245263D3A9D79BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F5DA5B20F01FE34BCB1103E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Uberish/Pods-Uberish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC7C18F7E245263D3A9D79BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Uberish/Pods-Uberish-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0A98DD313E467FFFE1A834F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93DCF4DB1F114970005B8A07 /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		93DCF4F21F114970005B8A07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8401DA419BF7FF2289245FDE /* Pods-Uberish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
@@ -274,6 +350,7 @@
 		};
 		93DCF4F31F114970005B8A07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E659B91C3940C5C1E8B679 /* Pods-Uberish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
