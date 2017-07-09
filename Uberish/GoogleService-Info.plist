@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>559433525833-4ueutbhn9jivffp7tc65a5v8mo3nq0r8.apps.googleusercontent.com</string>
+	<string>811670352341-b7mku9461pfsuksresdgv55l4m8ur5no.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.559433525833-4ueutbhn9jivffp7tc65a5v8mo3nq0r8</string>
+	<string>com.googleusercontent.apps.811670352341-b7mku9461pfsuksresdgv55l4m8ur5no</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDnSpRsXce_GwsbDf2FZjmpz9ZRFQWvea8</string>
+	<string>AIzaSyAIb-1s5q4MLO8GQhTAHLmnzbsC6el3d9I</string>
 	<key>GCM_SENDER_ID</key>
-	<string>559433525833</string>
+	<string>811670352341</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.miggsantos.uberish</string>
+	<string>com.miggsantos.uberishdev</string>
 	<key>PROJECT_ID</key>
-	<string>huberish-38d47</string>
+	<string>uberish-28f1b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>huberish-38d47.appspot.com</string>
+	<string>uberish-28f1b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:559433525833:ios:4cb2a04d788a87b5</string>
+	<string>1:811670352341:ios:ab494b0fcb856017</string>
 	<key>DATABASE_URL</key>
-	<string>https://huberish-38d47.firebaseio.com</string>
+	<string>https://uberish-28f1b.firebaseio.com</string>
 </dict>
 </plist>

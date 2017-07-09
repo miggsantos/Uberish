@@ -19,7 +19,8 @@
 		933DCD5C1F11D52A0014FCB3 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD5B1F11D52A0014FCB3 /* UIViewExt.swift */; };
 		933DCD5E1F11E1500014FCB3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD5D1F11E1500014FCB3 /* LoginVC.swift */; };
 		933DCD601F126BFB0014FCB3 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD5F1F126BFB0014FCB3 /* RoundedCornerTextField.swift */; };
-		933DCD621F12CE130014FCB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933DCD611F12CE130014FCB3 /* GoogleService-Info.plist */; };
+		933DCD651F12CFF10014FCB3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD641F12CFF10014FCB3 /* DataService.swift */; };
+		933DCD671F12D8F20014FCB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933DCD661F12D8F20014FCB3 /* GoogleService-Info.plist */; };
 		93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E21F114970005B8A07 /* AppDelegate.swift */; };
 		93DCF4E51F114970005B8A07 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E41F114970005B8A07 /* HomeVC.swift */; };
 		93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4E61F114970005B8A07 /* Main.storyboard */; };
@@ -40,7 +41,8 @@
 		933DCD5B1F11D52A0014FCB3 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		933DCD5D1F11E1500014FCB3 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		933DCD5F1F126BFB0014FCB3 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
-		933DCD611F12CE130014FCB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		933DCD641F12CFF10014FCB3 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		933DCD661F12D8F20014FCB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93DCF4DF1F114970005B8A07 /* Uberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DCF4E21F114970005B8A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DCF4E41F114970005B8A07 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		933DCD631F12CFD80014FCB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				933DCD641F12CFF10014FCB3 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		93DCF4D61F11496F005B8A07 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		93DCF4E11F114970005B8A07 /* Uberish */ = {
 			isa = PBXGroup;
 			children = (
+				933DCD631F12CFD80014FCB3 /* Services */,
 				933DCD5A1F11D5110014FCB3 /* Extensions */,
 				933DCD571F11C17B0014FCB3 /* Protocols */,
 				933DCD481F116C8F0014FCB3 /* Model */,
@@ -150,7 +161,7 @@
 				93DCF4E91F114970005B8A07 /* Assets.xcassets */,
 				93DCF4EB1F114970005B8A07 /* LaunchScreen.storyboard */,
 				93DCF4EE1F114970005B8A07 /* Info.plist */,
-				933DCD611F12CE130014FCB3 /* GoogleService-Info.plist */,
+				933DCD661F12D8F20014FCB3 /* GoogleService-Info.plist */,
 			);
 			path = Uberish;
 			sourceTree = "<group>";
@@ -228,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DCF4ED1F114970005B8A07 /* LaunchScreen.storyboard in Resources */,
-				933DCD621F12CE130014FCB3 /* GoogleService-Info.plist in Resources */,
+				933DCD671F12D8F20014FCB3 /* GoogleService-Info.plist in Resources */,
 				93DCF4EA1F114970005B8A07 /* Assets.xcassets in Resources */,
 				93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */,
 			);
@@ -290,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				933DCD591F11C1960014FCB3 /* CenterVCDelegate.swift in Sources */,
+				933DCD651F12CFF10014FCB3 /* DataService.swift in Sources */,
 				933DCD501F11AA180014FCB3 /* CircleView.swift in Sources */,
 				933DCD5E1F11E1500014FCB3 /* LoginVC.swift in Sources */,
 				933DCD541F11BCBE0014FCB3 /* LeftSidePanelVC.swift in Sources */,
@@ -427,11 +439,13 @@
 			baseConfigurationReference = 8401DA419BF7FF2289245FDE /* Pods-Uberish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = Uberish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.uberish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.uberishdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -441,11 +455,13 @@
 			baseConfigurationReference = F6E659B91C3940C5C1E8B679 /* Pods-Uberish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = Uberish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.uberish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.uberishdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
