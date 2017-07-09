@@ -1,5 +1,5 @@
 //
-//  LeftSidePanelVC.swift
+//  LoginVC.swift
 //  Uberish
 //
 //  Created by Miguel Santos on 09/07/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeftSidePanelVC: UIViewController {
+class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +22,14 @@ class LeftSidePanelVC: UIViewController {
     }
     
 
-    @IBAction func signUpLoginBtnWasPressed(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
-        present(loginVC!, animated: true, completion: nil)
-        
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }
