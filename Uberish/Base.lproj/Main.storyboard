@@ -419,6 +419,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="actionBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOC-YL-3ue"/>
+                                                <action selector="authBtnWasPressed:" destination="XeA-Vj-hLq" eventType="touchUpInside" id="a3W-63-MnP"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -447,6 +448,12 @@
                             <constraint firstItem="KaP-jj-DJf" firstAttribute="leading" secondItem="NCe-na-VO2" secondAttribute="leading" id="zw1-9Y-lqy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authBtn" destination="vmO-DD-xtq" id="Tcf-eQ-Cly"/>
+                        <outlet property="emailField" destination="pJZ-xf-Wd5" id="QLa-oD-tVz"/>
+                        <outlet property="passwordField" destination="dRs-vg-b4E" id="tWM-Ol-4pA"/>
+                        <outlet property="segmentedControl" destination="MdD-4h-90s" id="UMn-Ch-E1r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qn5-Yv-O2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
