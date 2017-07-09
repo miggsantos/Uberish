@@ -13,8 +13,11 @@
 		933DCD4E1F11A8EC0014FCB3 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD4D1F11A8EC0014FCB3 /* RoundedShadowView.swift */; };
 		933DCD501F11AA180014FCB3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD4F1F11AA180014FCB3 /* CircleView.swift */; };
 		933DCD521F11ABD10014FCB3 /* RoundShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD511F11ABD10014FCB3 /* RoundShadowButton.swift */; };
+		933DCD541F11BCBE0014FCB3 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD531F11BCBE0014FCB3 /* LeftSidePanelVC.swift */; };
+		933DCD561F11BD2F0014FCB3 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD551F11BD2F0014FCB3 /* ContainerVC.swift */; };
+		933DCD591F11C1960014FCB3 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD581F11C1960014FCB3 /* CenterVCDelegate.swift */; };
 		93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E21F114970005B8A07 /* AppDelegate.swift */; };
-		93DCF4E51F114970005B8A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E41F114970005B8A07 /* ViewController.swift */; };
+		93DCF4E51F114970005B8A07 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E41F114970005B8A07 /* HomeVC.swift */; };
 		93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4E61F114970005B8A07 /* Main.storyboard */; };
 		93DCF4EA1F114970005B8A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4E91F114970005B8A07 /* Assets.xcassets */; };
 		93DCF4ED1F114970005B8A07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4EB1F114970005B8A07 /* LaunchScreen.storyboard */; };
@@ -27,9 +30,12 @@
 		933DCD4D1F11A8EC0014FCB3 /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		933DCD4F1F11AA180014FCB3 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		933DCD511F11ABD10014FCB3 /* RoundShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadowButton.swift; sourceTree = "<group>"; };
+		933DCD531F11BCBE0014FCB3 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
+		933DCD551F11BD2F0014FCB3 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		933DCD581F11C1960014FCB3 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 		93DCF4DF1F114970005B8A07 /* Uberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DCF4E21F114970005B8A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93DCF4E41F114970005B8A07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93DCF4E41F114970005B8A07 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		93DCF4E71F114970005B8A07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93DCF4E91F114970005B8A07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93DCF4EC1F114970005B8A07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +67,9 @@
 		933DCD461F116C7A0014FCB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				93DCF4E41F114970005B8A07 /* HomeVC.swift */,
+				933DCD531F11BCBE0014FCB3 /* LeftSidePanelVC.swift */,
+				933DCD551F11BD2F0014FCB3 /* ContainerVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -84,6 +93,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		933DCD571F11C17B0014FCB3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				933DCD581F11C1960014FCB3 /* CenterVCDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		93DCF4D61F11496F005B8A07 = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +122,11 @@
 		93DCF4E11F114970005B8A07 /* Uberish */ = {
 			isa = PBXGroup;
 			children = (
+				933DCD571F11C17B0014FCB3 /* Protocols */,
 				933DCD481F116C8F0014FCB3 /* Model */,
 				933DCD471F116C850014FCB3 /* View */,
 				933DCD461F116C7A0014FCB3 /* Controller */,
 				93DCF4E21F114970005B8A07 /* AppDelegate.swift */,
-				93DCF4E41F114970005B8A07 /* ViewController.swift */,
 				93DCF4E61F114970005B8A07 /* Main.storyboard */,
 				93DCF4E91F114970005B8A07 /* Assets.xcassets */,
 				93DCF4EB1F114970005B8A07 /* LaunchScreen.storyboard */,
@@ -251,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933DCD591F11C1960014FCB3 /* CenterVCDelegate.swift in Sources */,
 				933DCD501F11AA180014FCB3 /* CircleView.swift in Sources */,
-				93DCF4E51F114970005B8A07 /* ViewController.swift in Sources */,
+				933DCD541F11BCBE0014FCB3 /* LeftSidePanelVC.swift in Sources */,
+				93DCF4E51F114970005B8A07 /* HomeVC.swift in Sources */,
+				933DCD561F11BD2F0014FCB3 /* ContainerVC.swift in Sources */,
 				933DCD4C1F11A6630014FCB3 /* RoundImageView.swift in Sources */,
 				933DCD4E1F11A8EC0014FCB3 /* RoundedShadowView.swift in Sources */,
 				93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */,
