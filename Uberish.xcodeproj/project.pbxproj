@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		53A4A2337A1D3F274FB492F8 /* Pods_Uberish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F9B2286E1E0F6578671F7D /* Pods_Uberish.framework */; };
+		933DCD4A1F116CB70014FCB3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD491F116CB70014FCB3 /* GradientView.swift */; };
+		933DCD4C1F11A6630014FCB3 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD4B1F11A6630014FCB3 /* RoundImageView.swift */; };
+		933DCD4E1F11A8EC0014FCB3 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD4D1F11A8EC0014FCB3 /* RoundedShadowView.swift */; };
+		933DCD501F11AA180014FCB3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD4F1F11AA180014FCB3 /* CircleView.swift */; };
+		933DCD521F11ABD10014FCB3 /* RoundShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD511F11ABD10014FCB3 /* RoundShadowButton.swift */; };
 		93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E21F114970005B8A07 /* AppDelegate.swift */; };
 		93DCF4E51F114970005B8A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E41F114970005B8A07 /* ViewController.swift */; };
 		93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4E61F114970005B8A07 /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 
 /* Begin PBXFileReference section */
 		8401DA419BF7FF2289245FDE /* Pods-Uberish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uberish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uberish/Pods-Uberish.debug.xcconfig"; sourceTree = "<group>"; };
+		933DCD491F116CB70014FCB3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		933DCD4B1F11A6630014FCB3 /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		933DCD4D1F11A8EC0014FCB3 /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		933DCD4F1F11AA180014FCB3 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		933DCD511F11ABD10014FCB3 /* RoundShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadowButton.swift; sourceTree = "<group>"; };
 		93DCF4DF1F114970005B8A07 /* Uberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DCF4E21F114970005B8A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DCF4E41F114970005B8A07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +58,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		933DCD461F116C7A0014FCB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		933DCD471F116C850014FCB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				933DCD491F116CB70014FCB3 /* GradientView.swift */,
+				933DCD4B1F11A6630014FCB3 /* RoundImageView.swift */,
+				933DCD4D1F11A8EC0014FCB3 /* RoundedShadowView.swift */,
+				933DCD4F1F11AA180014FCB3 /* CircleView.swift */,
+				933DCD511F11ABD10014FCB3 /* RoundShadowButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		933DCD481F116C8F0014FCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		93DCF4D61F11496F005B8A07 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +105,9 @@
 		93DCF4E11F114970005B8A07 /* Uberish */ = {
 			isa = PBXGroup;
 			children = (
+				933DCD481F116C8F0014FCB3 /* Model */,
+				933DCD471F116C850014FCB3 /* View */,
+				933DCD461F116C7A0014FCB3 /* Controller */,
 				93DCF4E21F114970005B8A07 /* AppDelegate.swift */,
 				93DCF4E41F114970005B8A07 /* ViewController.swift */,
 				93DCF4E61F114970005B8A07 /* Main.storyboard */,
@@ -212,8 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933DCD501F11AA180014FCB3 /* CircleView.swift in Sources */,
 				93DCF4E51F114970005B8A07 /* ViewController.swift in Sources */,
+				933DCD4C1F11A6630014FCB3 /* RoundImageView.swift in Sources */,
+				933DCD4E1F11A8EC0014FCB3 /* RoundedShadowView.swift in Sources */,
 				93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */,
+				933DCD521F11ABD10014FCB3 /* RoundShadowButton.swift in Sources */,
+				933DCD4A1F116CB70014FCB3 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +425,7 @@
 				93DCF4F31F114970005B8A07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
