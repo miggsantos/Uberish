@@ -19,6 +19,7 @@
 		933DCD5C1F11D52A0014FCB3 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD5B1F11D52A0014FCB3 /* UIViewExt.swift */; };
 		933DCD5E1F11E1500014FCB3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD5D1F11E1500014FCB3 /* LoginVC.swift */; };
 		933DCD601F126BFB0014FCB3 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD5F1F126BFB0014FCB3 /* RoundedCornerTextField.swift */; };
+		933DCD621F12CE130014FCB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933DCD611F12CE130014FCB3 /* GoogleService-Info.plist */; };
 		93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E21F114970005B8A07 /* AppDelegate.swift */; };
 		93DCF4E51F114970005B8A07 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E41F114970005B8A07 /* HomeVC.swift */; };
 		93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4E61F114970005B8A07 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		933DCD5B1F11D52A0014FCB3 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		933DCD5D1F11E1500014FCB3 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		933DCD5F1F126BFB0014FCB3 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
+		933DCD611F12CE130014FCB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93DCF4DF1F114970005B8A07 /* Uberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DCF4E21F114970005B8A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DCF4E41F114970005B8A07 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				93DCF4E91F114970005B8A07 /* Assets.xcassets */,
 				93DCF4EB1F114970005B8A07 /* LaunchScreen.storyboard */,
 				93DCF4EE1F114970005B8A07 /* Info.plist */,
+				933DCD611F12CE130014FCB3 /* GoogleService-Info.plist */,
 			);
 			path = Uberish;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DCF4ED1F114970005B8A07 /* LaunchScreen.storyboard in Resources */,
+				933DCD621F12CE130014FCB3 /* GoogleService-Info.plist in Resources */,
 				93DCF4EA1F114970005B8A07 /* Assets.xcassets in Resources */,
 				93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */,
 			);
@@ -426,7 +430,7 @@
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = Uberish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.Uberish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.uberish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -440,7 +444,7 @@
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = Uberish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.Uberish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.uberish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
