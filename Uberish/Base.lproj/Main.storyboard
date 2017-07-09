@@ -335,6 +335,9 @@
                                                 <constraint firstAttribute="height" constant="30" id="nyR-xo-fr0"/>
                                             </constraints>
                                             <state key="normal" image="cancelBtn"/>
+                                            <connections>
+                                                <action selector="cancelBtnWasPressed:" destination="XeA-Vj-hLq" eventType="touchUpInside" id="EsK-TY-EQ6"/>
+                                            </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2h8-dA-CNv">
                                             <rect key="frame" x="17" y="148" width="340" height="371"/>
@@ -384,7 +387,7 @@
                                                     </segments>
                                                     <color key="tintColor" red="0.84705882349999995" green="0.2784313725" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 </segmentedControl>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJZ-xf-Wd5">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJZ-xf-Wd5" customClass="RoundedCornerTextField" customModule="Uberish" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="231" width="340" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="LbY-Tk-GI1"/>
@@ -393,7 +396,7 @@
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRs-vg-b4E">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRs-vg-b4E" customClass="RoundedCornerTextField" customModule="Uberish" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="311" width="340" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="jdj-GZ-tee"/>
