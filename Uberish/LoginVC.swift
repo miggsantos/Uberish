@@ -60,7 +60,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                 DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: false)
                             }  else {
                                 // driver
-                                let userData = ["provider": user.providerID, "userIsDriver": true, "isPickupModeEnable": false, "driverIsOnTrip": false] as [String:Any]
+                                let userData = ["provider": user.providerID, "userIsDriver": true, "isPickupModeEnabled": false, "driverIsOnTrip": false] as [String:Any]
                                 DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: true)
                             }
                         }
@@ -105,7 +105,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                         let userData = ["provider": user.providerID] as [String:Any]
                                         DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: false)
                                     } else {
-                                        let userData = ["provider": user.providerID, "userIsDriver": true, "isPickupModeEnable": false, "driverIsOnTrip": false] as [String:Any]
+                                        let userData = ["provider": user.providerID, "userIsDriver": true, "isPickupModeEnabled": false, "driverIsOnTrip": false] as [String:Any]
                                         DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: true)
                                     }
                                 }
