@@ -110,6 +110,9 @@
                                     <constraint firstAttribute="height" constant="60" id="RDx-IC-86l"/>
                                 </constraints>
                                 <state key="normal" image="centerMapBtn"/>
+                                <connections>
+                                    <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qr-V1-hdg"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MqD-ks-pew">
                                 <rect key="frame" x="36" y="78" width="303" height="61"/>
