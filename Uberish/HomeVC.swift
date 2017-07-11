@@ -98,5 +98,19 @@ extension HomeVC: MKMapViewDelegate {
 
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if let annotation = annotation as? DriverAnonotation {
+            let identifier = "driver"
+            var view: MKAnnotationView
+            view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.image = UIImage(named: "driverAnnotation")
+            return view
+        } else {
+            return nil
+        }
+
+    }
+    
 }
 
