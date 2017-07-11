@@ -22,7 +22,7 @@ class UpdateService {
                 for user in snapshot {
                     if user.key == FIRAuth.auth()?.currentUser?.uid {
                         DataService.instance.REF_USERS.child(user.key).updateChildValues(["coordinate": [coordinate.latitude, coordinate.longitude]])
-                        return;
+                        //return;
                     }
                 }
             }
@@ -38,7 +38,7 @@ class UpdateService {
                         if driver.childSnapshot(forPath: "isPickupModeEnabled").value as? Bool == true {
                             DataService.instance.REF_DRIVERS.child(driver.key).updateChildValues(["coordinate": [coordinate.latitude, coordinate.longitude]])
                         }
-                        return;
+                        //return;
                     }
                 }
             }

@@ -9,8 +9,8 @@
 import Foundation
 import MapKit
 
-class DriverAnonotation: NSObject, MKAnnotation {
-    var coordinate: CLLocationCoordinate2D
+class DriverAnnotation: NSObject, MKAnnotation {
+    dynamic var coordinate: CLLocationCoordinate2D
     var key: String
     
     init(coordinate: CLLocationCoordinate2D, withKey key: String) {
@@ -21,7 +21,7 @@ class DriverAnonotation: NSObject, MKAnnotation {
         
     }
     
-    func update(annotationPosition annotation: DriverAnonotation, widthCoordinate coordinate: CLLocationCoordinate2D) {
+    func update(annotationPosition annotation: DriverAnnotation, widthCoordinate coordinate: CLLocationCoordinate2D) {
     
         var location = self.coordinate
         location.latitude = coordinate.latitude
