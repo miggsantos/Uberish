@@ -208,6 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="actionBtn" destination="gGf-wK-Td1" id="5bb-OO-AFM"/>
+                        <outlet property="centerMapBtn" destination="DVs-Tq-B6m" id="raD-gu-doC"/>
                         <outlet property="mapView" destination="SSD-t8-FGa" id="Rfw-mU-ZwU"/>
                     </connections>
                 </viewController>
