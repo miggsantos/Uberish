@@ -29,6 +29,8 @@ class HomeVC: UIViewController {
     
     var tableView = UITableView()
     
+    var matchingItems = [MKMapItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -182,6 +184,28 @@ extension HomeVC: MKMapViewDelegate {
         centerMapBtn.fadeTo(alphaValue: 1.0, withDuration: 0.2)
     }
     
+    func performSearch() {
+        matchingItems.removeAll()
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = destinationTextField.text
+        request.region = mapView.region
+        
+        let search = MKLocalSearch(request: request)
+        search.start { (response, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else if response!.mapItems.count == 0 {
+                print("No Results!")
+            } else {
+                for mapItem in response!.mapItems {
+                    self.matchingItems.append(mapItem as MKMapItem)
+                    self.tableView.reloadData()
+                }
+            }
+            
+        }
+    }
+    
 }
 
 extension HomeVC: UITextFieldDelegate {
@@ -215,6 +239,7 @@ extension HomeVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == destinationTextField {
+            performSearch()
             view.endEditing(true)
         }
         return true
@@ -232,6 +257,9 @@ extension HomeVC: UITextFieldDelegate {
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        matchingItems.removeAll()
+        tableView.reloadData()
+        centerMapOnUserLocation()
         return true
     }
     
@@ -260,7 +288,13 @@ extension HomeVC: UITextFieldDelegate {
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "locationCell")
+        let mapItem = matchingItems[indexPath.row]
+        cell.textLabel?.text = mapItem.name
+        cell.detailTextLabel?.text = mapItem.placemark.title
+        return cell
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -268,7 +302,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return matchingItems.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
