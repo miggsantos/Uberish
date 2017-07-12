@@ -23,6 +23,7 @@
 		933DCD671F12D8F20014FCB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 933DCD661F12D8F20014FCB3 /* GoogleService-Info.plist */; };
 		933DCD691F1450290014FCB3 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD681F1450290014FCB3 /* UpdateService.swift */; };
 		933DCD6B1F1458190014FCB3 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933DCD6A1F1458190014FCB3 /* DriverAnnotation.swift */; };
+		934DBD2C1F15A7980037D703 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934DBD2B1F15A7980037D703 /* PassengerAnnotation.swift */; };
 		93DCF4E31F114970005B8A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E21F114970005B8A07 /* AppDelegate.swift */; };
 		93DCF4E51F114970005B8A07 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCF4E41F114970005B8A07 /* HomeVC.swift */; };
 		93DCF4E81F114970005B8A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF4E61F114970005B8A07 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		933DCD661F12D8F20014FCB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		933DCD681F1450290014FCB3 /* UpdateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		933DCD6A1F1458190014FCB3 /* DriverAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		934DBD2B1F15A7980037D703 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
 		93DCF4DF1F114970005B8A07 /* Uberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DCF4E21F114970005B8A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DCF4E41F114970005B8A07 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				933DCD511F11ABD10014FCB3 /* RoundShadowButton.swift */,
 				933DCD5F1F126BFB0014FCB3 /* RoundedCornerTextField.swift */,
 				933DCD6A1F1458190014FCB3 /* DriverAnnotation.swift */,
+				934DBD2B1F15A7980037D703 /* PassengerAnnotation.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				933DCD601F126BFB0014FCB3 /* RoundedCornerTextField.swift in Sources */,
 				933DCD521F11ABD10014FCB3 /* RoundShadowButton.swift in Sources */,
 				933DCD4A1F116CB70014FCB3 /* GradientView.swift in Sources */,
+				934DBD2C1F15A7980037D703 /* PassengerAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
