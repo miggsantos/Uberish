@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
 
     @IBOutlet weak var emailField: RoundedCornerTextField!
     @IBOutlet weak var passwordField: RoundedCornerTextField!
@@ -74,10 +74,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                             switch errorCode {
 
                             case .errorCodeWrongPassword:
-                                print("Whoops! That was a wrong password. Please try again.")
+                                self.showAlert("Whoops! That was a wrong password. Please try again.")
 
                             default:
-                                print("An unexpected error occurred in SignIn. Please try again.")
+                                self.showAlert("An unexpected error occurred in SignIn. Please try again.")
                                 
                             }
                         }
@@ -88,14 +88,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                 if let errorCode = FIRAuthErrorCode(rawValue: error!._code) {
                                     switch errorCode {
                                     case .errorCodeInvalidEmail:
-                                        print("Email invalid. Please try again.")
+                                        self.showAlert("Email invalid. Please try again.")
                                     case .errorCodeEmailAlreadyInUse:
-                                        print("That email is already in user. Please try again.")
-
+                                        self.showAlert("That email is already in user. Please try again.")
                                     case .errorCodeWeakPassword:
-                                        print("Whoops! That was a weak password. Please try again.")
+                                        self.showAlert("Whoops! That was a weak password. Please try again.")
                                     default:
-                                        print("An unexpected error occurred. Please try again.")
+                                        self.showAlert("An unexpected error occurred. Please try again.")
                                         
                                     }
                                 }
