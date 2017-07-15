@@ -14,13 +14,29 @@ class PickupVC: UIViewController {
     
     @IBOutlet weak var pickupMapView: RoundMapView!
     
+    
+    var pickupCoordinate: CLLocationCoordinate2D!
+    var passengerKey: String!
+    
     var regionRadius: CLLocationDistance = 2000
     var pin: MKPlacemark? = nil
+    
+    var locationPlacemark: MKPlacemark!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        pickupMapView.delegate = self
+        
+        locationPlacemark = MKPlacemark(coordinate: pickupCoordinate)
+        dropPinFor(placemark: locationPlacemark)
+        centerMapOnLocation(location: locationPlacemark.location!)
+        
+    }
+    
+    func initData(coordinate: CLLocationCoordinate2D, passengerKey: String) {
+        self.pickupCoordinate = coordinate
+        self.passengerKey = passengerKey
     }
 
     @IBAction func cancelBtnWasPressed(_ sender: Any) {
@@ -41,7 +57,7 @@ extension PickupVC: MKMapViewDelegate {
         let identifier = "pickupPoint"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: <#T##MKAnnotation?#>, reuseIdentifier: identifier)
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         } else {
             annotationView?.annotation = annotation
         }

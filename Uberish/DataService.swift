@@ -12,7 +12,7 @@ import Firebase
 let DB_BASE = FIRDatabase.database().reference()
 
 class DataService {
-
+    
     static let instance = DataService()
     
     private var _REF_BASE = DB_BASE
@@ -44,6 +44,24 @@ class DataService {
         }
     }
     
-    
-    
+    func driverIsAvailable(key: String, handler: @escaping(_ status:Bool?) -> Void) {
+        DataService.instance.REF_DRIVERS.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let driverSnapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for driver in driverSnapshot {
+                    if driver.key == key {
+                        if driver.childSnapshot(forPath: "isPickupModeEnable").value as? Bool == true {
+                            if driver.childSnapshot(forPath: "driverIsOnTrip").value as? Bool == true {
+                                handler(false)
+                            } else {
+                                handler(true)
+                            }
+                        }
+                    }
+                }
+            }
+        })
+    }
 }
+
+
+
