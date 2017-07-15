@@ -49,7 +49,7 @@ class DataService {
             if let driverSnapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for driver in driverSnapshot {
                     if driver.key == key {
-                        if driver.childSnapshot(forPath: "isPickupModeEnable").value as? Bool == true {
+                        if driver.childSnapshot(forPath: "isPickupModeEnabled").value as? Bool == true {
                             if driver.childSnapshot(forPath: "driverIsOnTrip").value as? Bool == true {
                                 handler(false)
                             } else {
