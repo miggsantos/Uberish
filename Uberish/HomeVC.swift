@@ -79,7 +79,9 @@ class HomeVC: UIViewController, Alertable {
                                 let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                                 let pickupVC = storyboard.instantiateViewController(withIdentifier: "PickupVC") as? PickupVC
                                 
-                                pickupVC?.initData(coordinate: CLLocationCoordinate2DMake(pickupCoordinateArray[0] as! CLLocationDegrees, pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: tripKey)
+           
+                                
+                                pickupVC?.initData(coordinate: CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: tripKey)
            
                                 self.present(pickupVC!, animated: true, completion: nil)
                             }
