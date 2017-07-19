@@ -19,6 +19,10 @@ class HomeVC: UIViewController, Alertable {
     @IBOutlet weak var centerMapBtn: UIButton!
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var destinationCircle: CircleView!
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    
+
     
     var delegate: CenterVCDelegate?
     var manager: CLLocationManager?
@@ -69,7 +73,7 @@ class HomeVC: UIViewController, Alertable {
         UpdateService.instance.observeTrips { (tripDict) in
             if let tripDict = tripDict {
                 let pickupCoordinateArray = tripDict["pickupCoordinate"] as! NSArray
-                let passengerKey = tripDict["passengerKey"] as! String
+                let tripKey = tripDict["passengerKey"] as! String
                 let acceptanceStatus = tripDict["tripIsAccepted"] as! Bool
                 
                 if acceptanceStatus == false {
@@ -81,7 +85,7 @@ class HomeVC: UIViewController, Alertable {
                                 
            
                                 
-                                pickupVC?.initData(coordinate: CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: passengerKey)
+                                pickupVC?.initData(coordinate: CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: tripKey)
            
                                 self.present(pickupVC!, animated: true, completion: nil)
                             }
@@ -119,6 +123,29 @@ class HomeVC: UIViewController, Alertable {
                 })
             }
         })
+        
+        DataService.instance.REF_TRIPS.observe(.childRemoved, with: { (removedTripSnapshot) in
+            let removedTripDict = removedTripSnapshot.value as? [String: AnyObject]
+            if removedTripDict?["driverKey"] != nil {
+                DataService.instance.REF_DRIVERS.child(removedTripDict?["driverKey"] as! String).updateChildValues(["driverIsOnTrip": false])
+            }
+            DataService.instance.userIsDriver(passengerKey: self.currentUserId!, handler: { (isDriver) in
+                if isDriver == true {
+                    // remove overlays and annotations / hide request ride btn and cancel btn
+                } else {
+                    self.cancelBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+                    self.actionBtn.animateButton(shouldLoad: false, withMessage: "REQUEST RIDE")
+                    
+                    self.destinationTextField.isUserInteractionEnabled = true
+                    self.destinationTextField.text = ""
+                    
+                    //remove all map annotations and overlays
+                    self.centerMapOnUserLocation()
+                }
+            })
+            
+        })
+        
     }
     
     
@@ -221,6 +248,25 @@ class HomeVC: UIViewController, Alertable {
         centerMapOnUserLocation()
         centerMapBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
     }
+    
+    @IBAction func cancelBtnWasPressed(_ sender: Any) {
+        DataService.instance.driverIsOnTrip(driverKey: currentUserId!) { (isOnTrip, driverKey, tripKey) in
+            if isOnTrip == true {
+                UpdateService.instance.cancelTrip(withPassengerKey: tripKey!, forDriverKey: driverKey!)
+            }
+        }
+        
+        DataService.instance.passegerIsOnTrip(passengerKey: currentUserId!) { (isOnTrip, driverKey, tripKey) in
+            if isOnTrip == true {
+                UpdateService.instance.cancelTrip(withPassengerKey: self.currentUserId!, forDriverKey: driverKey!)
+            } else {
+                UpdateService.instance.cancelTrip(withPassengerKey: self.currentUserId!, forDriverKey: nil)
+            }
+        }
+        
+        
+    }
+    
     
     
     @IBAction func menuBtnWasPressed(_ sender: Any) {
