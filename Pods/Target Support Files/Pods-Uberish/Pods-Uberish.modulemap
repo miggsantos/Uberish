@@ -1,0 +1,6 @@
+framework module Pods_Uberish {
+  umbrella header "Pods-Uberish-umbrella.h"
+
+  export *
+  module * { export * }
+}
